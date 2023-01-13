@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Polygon",
+    "rpc": "https://polygon-rpc.com",
+    "chainId": 137,
+    "symbol": "MATIC",
+    "logoURI": "/images/polygon.webp"
+  }
+]
