@@ -5,6 +5,7 @@ import { Web3ReactProvider } from "@web3-react/core";
 import Web3 from "web3";
 import Footer from "../components/Footer";
 import { Web3ContextProvider } from "../contexts/web3";
+import { GraphContextProvider } from "../contexts/graph";
 
 function getLibrary(provider: any) {
   return new Web3(provider);
@@ -22,9 +23,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <Web3ContextProvider>
-        <AppContent>
-          <Component {...pageProps} />
-        </AppContent>
+        <GraphContextProvider>
+          <AppContent>
+            <Component {...pageProps} />
+          </AppContent>
+        </GraphContextProvider>
       </Web3ContextProvider>
     </Web3ReactProvider>
   );

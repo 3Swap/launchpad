@@ -1,14 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import _ from "lodash";
 import Link from "next/link";
 import { Raleway, Poppins } from "@next/font/google";
 import SaleItemCard from "../components/SaleItemCard";
 import partners from "../assets/partners.json";
+import { useGraphContext } from "../contexts/graph";
 
 const raleway = Raleway({ subsets: ["latin"], weight: "700" });
 const poppins = Poppins({ weight: "400" });
 
 export default function Home() {
+  const { liveLaunchItems } = useGraphContext();
   return (
     <>
       <Head>
@@ -62,10 +65,9 @@ export default function Home() {
           <div
             className={`${raleway.className} flex flex-col lg:flex-row justify-evenly gap-8 items-center w-full px-4 py-3 flex-wrap`}
           >
-            <SaleItemCard />
-            <SaleItemCard />
-            <SaleItemCard />
-            <SaleItemCard />
+            {_.slice(liveLaunchItems, 0, 4).map((launch) => (
+              <SaleItemCard key={launch.id} data={launch} lbl="Live" />
+            ))}
           </div>
           <div className="block lg:hidden w-full px-3 py-2">
             <Link href="/listing">

@@ -16,9 +16,8 @@ export default function Header() {
       <div
         className={`hidden lg:flex justify-center gap-4 items-center ${raleway.className} text-[#fff] font-[700] text-[18px]`}
       >
-        <a href="#">Projects</a>
-        <a href="#">Buy $SAP</a>
-        <a href="#">Staking</a>
+        <Link href="/">Home</Link>
+        <Link href="/launch">Launch Sale</Link>
         <button onClick={!active ? connectInjected : disconnectWallet} className="bg-[#000] px-3 py-2">
           {!account ? "Connect Wallet" : formatEthAddress(account, 5)}
         </button>
