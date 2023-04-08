@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
 @layer base {
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -38,8 +41,4 @@
 @font-face {
   font-family: "Kinn";
   src: url("/frontend/public/fonts/Kinn-Black.ttf");
-}
-@font-face {
-  font-family: "Poppins";
-  src: url("/frontend/public/fonts/Poppins-Black.ttf");
 }

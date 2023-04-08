@@ -9,6 +9,7 @@ import { useGraphContext } from "../contexts/graph";
 
 export default function Home() {
   const { liveLaunchItems } = useGraphContext();
+
   return (
     <>
       <Head>
@@ -109,61 +110,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="flex w-full h-[90vh] mx-[50px]" style={{ scrollSnapAlign: "center" }}>
-          <div className="w-full">
-            <span className="flex justify-between">
-              <h1 className="font-kinn text-white font-[700]">Live sales</h1>
-              <button className="btn bg-black text-white font-kinn font-[600] rounded-md py-2 px-5">
-                View more Listing
-              </button>
-            </span>
-            <div className="grid grid-cols-3 gap-4 my-5">
-              <div className="w-full bg-[rgba(0,0,0,0.25)] p-5 rounded">
-                <div className="flex w-full justify-between gap-1">
-                  <div className="w-[10%]">
-                    <div className="w-8 h-8 lg:w-16 lg:h-16 rounded-[9999px]">
-                      <img src="/images/coin.svg" alt="coin" className="w-8 h-8" />
-                    </div>
-                  </div>
-                  <div className=" flex w-[90%] flex-col">
-                    <div className="flex justify-between items-center gap-2">
-                      <span>
-                        <h1 className="text-[14px] text-white font-kinn font-[600]">
-                          Freight Coin Binance Smart Chain
-                        </h1>
-                      </span>
-                      <span className="p-2 bg-[purple] text-white text-[10px] font-kinn font-[600] rounded">Live</span>
-                    </div>
-                    <div className="flex text-white my-2">
-                      <p className="text-[12px] ">Native IDO tokens of the IDO Launchpad platform</p>
-                    </div>
-                    <div className="flex justify-between gap-2">
-                      <div className="flex items-center text-white font-kinn">
-                        <span>
-                          <img src="/images/ethereum.svg" alt="coin" className="w-full h-8" />
-                        </span>
-                        <span>ETH</span>
-                      </div>
-                      <div className="flex flex-col text-white text-sm leading-tight">
-                        <span className="text-[10px]">Sales ends in:</span>
-                        <span className="font-kinn text-md">00:12:28:04</span>
-                      </div>
-                    </div>
-                    <div className="flex flex-col w-full justify-between my-2">
-                      <div className="flex w-full justify-between bg-[red] p-2 gap-2">
-                        <div className="lfe">ok</div>
-                        <div className="lfe">deede</div>
-                      </div>
-                      <div className="flex w-full justify-between bg-[yellow] p-2 gap-2">
-                        <div className="lfe">ok</div>
-                        <div className="lfe">deede</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section className="flex w-full h-fit mx-[50px]" style={{ scrollSnapAlign: "center" }}>
+          {_.slice(liveLaunchItems, 0, 4).map((launch) => (
+            <SaleItemCard key={launch.id} data={launch} lbl="Live" />
+          ))}
         </section>
       </main>
     </>
