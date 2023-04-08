@@ -48,12 +48,6 @@ export default function SaleItemCard({ data, lbl }: SaleItemCardProps) {
   return (
     <>
       <div className="w-full">
-        <span className="flex justify-between">
-          <h1 className="font-kinn text-white font-[700]">Live sales</h1>
-          <button className="btn bg-black text-white font-kinn font-[600] rounded-md py-2 px-5">
-            View more Listing
-          </button>
-        </span>
         <div className="grid grid-cols-3 gap-4 my-5 ">
           <div className="w-full bg-[rgba(0,0,0,0.25)] p-5 rounded">
             <div className="flex w-full justify-between gap-1">

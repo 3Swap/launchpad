@@ -15,7 +15,7 @@ export default function Home() {
       <Head>
         <title>3Swap Launchpad</title>
       </Head>
-      <main className="container " style={{ scrollSnapAlign: "center" }}>
+      <main className="container" style={{ scrollSnapAlign: "center" }}>
         <section style={{ scrollSnapAlign: "center" }} className="flex w-full h-[90vh] mx-[50px]">
           <div className="flex w-1/2 items-center">
             <div className="flex flex-col">
@@ -111,6 +111,16 @@ export default function Home() {
           </div>
         </section>
         <section className="flex w-full h-fit mx-[50px]" style={{ scrollSnapAlign: "center" }}>
+          <div className="w-full mb-4">
+            <span className="flex justify-between">
+              <h1 className="font-kinn text-white font-[700]">Live sales</h1>
+              <Link href="/listing">
+                <button className="btn bg-black text-white font-kinn font-[600] rounded-md py-2 px-5">
+                  View more Listing
+                </button>
+              </Link>
+            </span>
+          </div>
           {_.slice(liveLaunchItems, 0, 4).map((launch) => (
             <SaleItemCard key={launch.id} data={launch} lbl="Live" />
           ))}
