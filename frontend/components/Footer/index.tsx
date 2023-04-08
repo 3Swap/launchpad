@@ -6,9 +6,9 @@ const raleway = Raleway({ weight: ["700"], subsets: ["latin"] });
 export default function Footer() {
   return (
     <div
-      className={`flex flex-col lg:flex-row justify-between items-center w-full text-[#fff] px-10 py-6 ${raleway.className} gap-3`}
+      className={`flex flex-col lg:flex-row justify-between items-center w-full text-[#fff]  py-6 ${raleway.className} gap-3 container mx-auto`}
     >
-      <div className="flex justify-center items-center gap-3">
+      <div className="flex justify-center items-center gap-3 ">
         <div className="flex justify-center items-center gap-3">
           <a className="gap-1 flex justify-center items-center" href="#">
             Careers <FiExternalLink />

@@ -8,7 +8,7 @@
     appearance: none;
     margin: 0;
   }
-  input[type='number'] {
+  input[type="number"] {
     -moz-appearance: textfield;
   }
 
@@ -34,4 +34,12 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+}
+@font-face {
+  font-family: "Kinn";
+  src: url("/frontend/public/fonts/Kinn-Black.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/frontend/public/fonts/Poppins-Black.ttf");
 }
