@@ -18,7 +18,7 @@ const AppContent = ({ children }: any) => (
   >
     <Header />
     <div className="flex-1 w-full overflow-auto">{children}</div>
-    {/* <Footer /> */}
+    <Footer />
   </div>
 );
 
