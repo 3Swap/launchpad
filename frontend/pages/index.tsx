@@ -407,7 +407,7 @@ export default function Home() {
                     </div>
                     <div className="my-2">
                       <Link href="/listing/1">
-                        <button className="btn bg-[#FFD549] py-2 px-5 font-kinn font-[600] rounded-md">View</button>
+                        <button className="btn bg-[#FFD549] py-2 px-5 font-kinn font-[700] rounded-md">View</button>
                       </Link>
                     </div>
                   </div>
