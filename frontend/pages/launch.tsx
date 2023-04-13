@@ -238,7 +238,7 @@ export default function Launch() {
   }, [chain, publicSaleCreator]);
 
   return (
-    <div className="flex justify-center items-center py-12 px-8 w-full">
+    <div className="flex  items-center py-12 px-8 w-full">
       <div className="bg-[#000]/25 flex flex-col justify-start items-center px-3 py-4 rounded-[5px] gap-8 w-full lg:w-1/4">
         <span className="font-Montserrat text-[#000]/75 font-[800] text-[24px] uppercase">Create Presale Launch</span>
         <form className="w-full flex flex-col justify-start items-center gap-4">

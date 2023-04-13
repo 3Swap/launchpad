@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./components/**/*.tsx", "./pages/**/*.tsx", "./styles/**/*.css"],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        poppins: "Poppins",
+        kinn: "Kinn"
+      }
+    }
   },
-  plugins: []
+  plugins: [require("daisyui")]
 };

@@ -12,7 +12,10 @@ function getLibrary(provider: any) {
 }
 
 const AppContent = ({ children }: any) => (
-  <div className="flex flex-col justify-center items-start w-screen h-screen overflow-auto bg-[#350870]">
+  <div
+    className="flex flex-col justify-center items-start w-screen h-screen overflow-y-auto bg-[#350870] "
+    style={{ scrollSnapType: "y mandatory", scrollBehavior: "smooth" }}
+  >
     <Header />
     <div className="flex-1 w-full overflow-auto">{children}</div>
     <Footer />
